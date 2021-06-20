@@ -4,7 +4,7 @@ pipeline {
  
     stage('Checkout Source') {
       steps {
-        checkout scm
+        //checkout scm
        }
     } 
       stage("Build image") {
