@@ -8,13 +8,7 @@ pipeline {
                 echo 'Building..'
                        }
       }
-     stage('Test') {
-            steps {
-                echo 'Testing..'
-                sh 'kubectl get pods'
-                sh 'kubectl get services wordpress'
-            }
-        }
+    
     
     stage('Deploy App') {
       steps {
@@ -32,6 +26,13 @@ pipeline {
         }
       }
     }
+     stage('Test') {
+            steps {
+                echo 'Testing..'
+                sh 'kubectl get pods'
+                sh 'kubectl get services wordpress'
+            }
+        }
  
   }
  
