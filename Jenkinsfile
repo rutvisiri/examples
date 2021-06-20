@@ -4,12 +4,10 @@ pipeline {
  
   
       stage("Build image") {
-            steps {
                  steps {
                 echo 'Building..'
                        }
-            }
-        }
+      }
      stage('Test') {
             steps {
                 echo 'Testing..'
