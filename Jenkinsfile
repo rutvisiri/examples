@@ -20,7 +20,6 @@ pipeline {
           //kubernetesDeploy(credentialsType: 'KubeConfig', kubeConfig: [path: 'kubeconfig.yaml'], configs: '**/hellowhale.yml', enableConfigSubstitution: false )
            
           node ('master'){
-            sh 'sudo su -'
             sh 'cd /etc/kubernetes'
             sh 'kubectl apply -k ./'
           
